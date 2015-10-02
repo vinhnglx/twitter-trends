@@ -7,7 +7,6 @@ class UsersController < ApplicationController
   def create
     @user = User.find_or_create_from_auth_hash(auth_hash)
     session[:user_id] = @user.id
-    $current_user = @user
     redirect_to root_path
   end
 
@@ -36,7 +35,6 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-
     if @user.update_attributes(user_params)
       flash[:success] = "Profile updated."
       redirect_to user_path
@@ -50,10 +48,8 @@ class UsersController < ApplicationController
   end
 
   def get_search_stats
-    searches = Search.where(user_id: current_user).find_each
-
     @query_hash = {}
-    searches.each do |s|
+    current_user.searches.each do |s|
       query = s.query
       if !@query_hash.has_key? query
         @query_hash[query] = 0
