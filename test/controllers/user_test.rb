@@ -7,7 +7,8 @@ class UserModelTest < ActiveSupport::TestCase
     user.first_name = "Test"
     user.last_name = "Test"
     user.email = "email@email.com"
-    assert(user.valid?, msg = "Failed user validation")
+    user.provider = "twitter"
+    assert_not user.save, "Saved the user without a uid"
   end
 
 end

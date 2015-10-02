@@ -43,15 +43,32 @@ group :development, :test do
   gem 'awesome_print'
   gem 'ffaker'
   gem 'web-console', '~> 2.0' # Access IRB on error pages or by <%= console %> in views
+
+  gem 'guard', ">= 2.2.2", require: false
+  gem 'guard-minitest', require: false
+  gem 'rb-fsevent', require: false
+  gem 'terminal-notifier-guard', require: false
 end
 
 group :test do
+  # For rake test
+  gem 'mocha'
+  gem 'minitest-reporters'
+  gem 'connection_pool'
+  gem 'shoulda'
+  gem 'test_after_commit'
+  gem 'launchy'
+  gem 'minitest'
+
+  # For rspec test
   gem 'database_cleaner'
   gem 'poltergeist' # helps with using PhantomJS headless browser in feature specs
   gem 'phantomjs', require: 'phantomjs/poltergeist'
   gem 'shoulda-matchers', '3.0.0.rc1'
-  gem 'vcr'
-  gem 'webmock'
+
+  # NOTE: Will open this gem later
+  # gem 'vcr'
+  # gem 'webmock'
 end
 
 group :production do
