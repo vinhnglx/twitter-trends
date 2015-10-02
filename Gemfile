@@ -40,6 +40,8 @@ group :development, :test do
   gem 'selenium-webdriver' # used by JavaScript-dependent feature specs (`js: true`)
   gem 'spring'
   gem 'spring-commands-rspec'
+  gem 'awesome_print'
+  gem 'ffaker'
   gem 'web-console', '~> 2.0' # Access IRB on error pages or by <%= console %> in views
 end
 

@@ -43,6 +43,7 @@ GEM
     autoprefixer-rails (6.0.3)
       execjs
       json
+    awesome_print (1.6.1)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     bootstrap-sass (3.3.5.1)
@@ -89,6 +90,7 @@ GEM
       railties (>= 3.0.0)
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
+    ffaker (2.1.0)
     ffi (1.9.10)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
@@ -279,6 +281,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_median
+  awesome_print
   bootstrap-sass (~> 3.3.5)
   byebug
   capybara
@@ -287,6 +290,7 @@ DEPENDENCIES
   database_cleaner
   dotenv-rails
   factory_girl_rails (~> 4.5)
+  ffaker
   google-analytics-rails
   groupdate
   jbuilder (~> 2.0)
