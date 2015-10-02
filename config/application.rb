@@ -33,5 +33,6 @@ module TwitterTrends
         helper_specs: true,
         routing_specs: true
       g.fixture_replacement :factory_girl, dir: "spec/factories"
+    end
   end
 end
