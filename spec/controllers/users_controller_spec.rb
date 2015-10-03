@@ -1,19 +1,6 @@
 require "rails_helper"
 
-describe UsersController do
-
-  context "POST create" do
-
-    before do
-      request.env['omniauth.auth'] = mock_auth_hash
-    end
-
-    it "redirects to root page" do
-      post :create
-      expect(response).to redirect_to(root_path)
-    end
-
-  end
+RSpec.describe UsersController, :type => :controller do
 
   context "GET display" do
 
@@ -30,7 +17,7 @@ describe UsersController do
     it "notifies for user can see own profile" do
       session[:user_id] = user.id
 
-      get :show, {id: "#{user.id + 1}"}
+      get :show, {id: 123123}
       expect(flash[:info]).to eq("Currently you may only visit your own profile.")
       expect(response).to redirect_to(user_path(user))
     end

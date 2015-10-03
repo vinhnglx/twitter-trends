@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe User do
+RSpec.describe User, :type => :model do
 
   context "validations" do
     it { should validate_presence_of(:uid) }

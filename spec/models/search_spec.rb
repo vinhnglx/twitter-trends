@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe Search do
+RSpec.describe Search, :type => :model do
 
   context "validations" do
     let(:search) { build(:search) }
