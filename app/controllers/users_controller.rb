@@ -1,9 +1,5 @@
 class UsersController < ApplicationController
 
-  def new
-    @user = User.new
-  end
-
   def create
     @user = User.find_or_create_from_auth_hash(auth_hash)
     session[:user_id] = @user.id
@@ -24,7 +20,7 @@ class UsersController < ApplicationController
         flash[:info] = "Currently you may only visit your own profile."
         redirect_to current_user
       else
-        @user = User.find(current_user)
+        @user = current_user
         get_search_stats
       end
     else

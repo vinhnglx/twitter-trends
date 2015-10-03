@@ -3,12 +3,11 @@ Rails.application.routes.draw do
   root 'queries#index'
 
   get  '/results' => 'queries#show'
-  get   '/results' => 'queries#index'
 
   get '/auth/:provider/callback' => 'users#create'
-  get '/logout' => 'users#destroy'
+  delete '/logout' => 'users#destroy'
 
-  resources :users
+  resources :users, except: [:destroy, :create, :new]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
