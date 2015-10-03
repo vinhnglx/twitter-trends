@@ -28,7 +28,7 @@
             <%= link_to "Signin", '/auth/twitter', :class => "btn btn-default navbar-btn" %>
           <% else %>
             <%= link_to "Profile", current_user, :class => "btn btn-default navbar-btn" %>
-            <%= link_to "Signout", '/logout', :class => "btn btn-default navbar-btn" %>
+            <%= link_to "Signout", '/logout', :class => "btn btn-default navbar-btn", :method => "delete" %>
           <% end %>
         </div>
       </div>
