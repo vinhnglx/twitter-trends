@@ -7,4 +7,4 @@ database:
     - bundle exec rake db:create db:migrate --trace
 test:
   override:
-    - bundle exec rake task
+    - bundle exec rake test
