@@ -6,5 +6,7 @@ database:
     - mv config/database.ci.yml config/database.yml
     - bundle exec rake db:create db:migrate --trace
 test:
+  pre:
+    - scripts/saddler.sh
   override:
     - bundle exec rake test
