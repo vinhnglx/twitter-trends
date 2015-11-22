@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 gem install --no-document rubocop rubocop-checkstyle_formatter \
     rails_best_practices \
     brakeman brakeman_translate_checkstyle_format \
