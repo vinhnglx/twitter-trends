@@ -7,6 +7,7 @@ database:
     - bundle exec rake db:create db:migrate --trace
 test:
   pre:
+    - chmod +x scripts/saddler.sh
     - scripts/saddler.sh
   override:
     - bundle exec rake test
