@@ -50,6 +50,11 @@ gem 'active_median'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'saddler'
+gem 'saddler-reporter-github'
+gem 'rubocop-checkstyle_formatter'
+gem 'rubocop'
+
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
