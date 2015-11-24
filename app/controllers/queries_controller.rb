@@ -6,7 +6,7 @@ class QueriesController < ApplicationController
   @time = DateTime.parse(time).strftime("%m/%d/%Y %H:%M")
 
   def index
-    $tracker.track(@time, "Index Hit")
+    $tracker.track(@time, "Index HitHitHitHitHitHitHitHitHitHitHitHitHitHitHitHitHitHitHitHitHitHitHitHitHitHitHitHitHitHitHitHitHitHitHitHitHitHitHitHitHit")
   end
 
   def show

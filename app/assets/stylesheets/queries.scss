@@ -54,11 +54,11 @@
   }
 
   .refresh {
-    display: none;
+    display: none !important;
   }
 
   .one-panel {
-    max-width: 97%;
+    max-width: 97% !important;
   }
 
   .two-panel {
