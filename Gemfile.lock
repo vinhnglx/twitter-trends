@@ -265,6 +265,7 @@ GEM
     scss_lint (0.43.0)
       rainbow (~> 2.0)
       sass (~> 3.4.15)
+    scss_lint_reporter_checkstyle (0.2.0)
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
@@ -361,6 +362,7 @@ DEPENDENCIES
   saddler-reporter-github
   sass-rails (~> 5.0)
   scss_lint
+  scss_lint_reporter_checkstyle
   sdoc (~> 0.4.0)
   shoulda
   spring
