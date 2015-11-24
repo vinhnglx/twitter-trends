@@ -54,6 +54,7 @@ gem 'saddler'
 gem 'saddler-reporter-github'
 gem 'rubocop-checkstyle_formatter'
 gem 'rubocop'
+gem 'scss_lint'
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views

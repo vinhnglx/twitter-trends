@@ -262,6 +262,9 @@ GEM
     sawyer (0.6.0)
       addressable (~> 2.3.5)
       faraday (~> 0.8, < 0.10)
+    scss_lint (0.43.0)
+      rainbow (~> 2.0)
+      sass (~> 3.4.15)
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
@@ -357,6 +360,7 @@ DEPENDENCIES
   saddler
   saddler-reporter-github
   sass-rails (~> 5.0)
+  scss_lint
   sdoc (~> 0.4.0)
   shoulda
   spring

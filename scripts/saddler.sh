@@ -10,13 +10,10 @@ echo "********************"
 echo "* RuboCop          *"
 echo "********************"
 
-git diff -z --name-only origin/master \
- | xargs -0 rubocop-select \
- | xargs rubocop \
-     --require rubocop/formatter/checkstyle_formatter \
-     --format RuboCop::Formatter::CheckstyleFormatter \
- | checkstyle_filter-git diff origin/master \
- | saddler report \
+rubocop --require `gem which rubocop/formatter/checkstyle_formatter` --format RuboCop::Formatter::CheckstyleFormatter --out rubocop.xml
+cat rubocop.xml \
+  | checkstyle_filter-git diff origin/master \
+  | saddler report \
     --require saddler/reporter/github \
     --reporter Saddler::Reporter::Github::PullRequestReviewComment
 
